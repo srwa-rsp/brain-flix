@@ -1,0 +1,52 @@
+//BREAKPOINTS
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1280px;
+
+//SPACING
+$spacing-small: 1rem;
+$spacing-medium: 2.3rem;
+$spacing-large: 5rem;
+
+//COLORS
+$primary-text-color: #323232;
+$primary-color: #0095ff;
+$secondary-color: #000000;
+$secondary-text-color: #AFAFAF ;
+$mercury: #e1e1e1;
+$alabaster: #fafafa;
+
+//PADDINGS
+$headline-padding-mobile: 0 0 1rem 0;
+$headline-padding-tablet: 0 0 2.3rem 0;
+
+//FONT SIZES
+$page-logo-font:(
+    null  : (size: 2.4rem, weight:400),
+);
+$page-header-font: (
+  null  : (size: 2rem, weight:600),
+  768px : (size: 4rem, weight:700),
+  1280px : (size: 5rem, weight:600),
+);
+$section-header-font: (
+  null  : (size: 2rem, weight:600),
+  768px : (size: 2.3rem, weight:700),
+);
+$subheader-font: (
+  null  : (size: 1.4rem, weight:600, line: 2rem),
+  768px : (size: 1.8rem, weight:600, line: 2rem),
+);
+$body-copy-font: (
+  null  : (size: 1.2rem, weight:400, line:1.6rem),
+);
+$footer-font: (
+  null  : (size: 1rem, weight:400 , line:1.6rem),
+);
+$footer-contact-font: (
+  null  : (size: 2.2rem, weight:600),
+  768px : (size: 2.5rem, weight:600),
+);
+$labels-buttons-font: (
+  null  : (size: 1rem, weight:600),
+  768px : (size: 1.2rem, weight:600),
+);
