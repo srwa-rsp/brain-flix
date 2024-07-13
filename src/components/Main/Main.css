@@ -1,0 +1,19 @@
+.main__content {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+@media (min-width: 768px) {
+  .main__content {
+    padding-left: 2.3rem;
+    padding-right: 2.3rem;
+  }
+}
+@media (min-width: 1280px) {
+  .main__content {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    flex-direction: row;
+  }
+}/*# sourceMappingURL=Main.css.map */
