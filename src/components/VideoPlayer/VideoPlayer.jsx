@@ -1,9 +1,10 @@
 import React from 'react'
+import './VideoPlayer.css'
 
 const VideoPlayer = ({video}) => {
   return (
-    <div>
-        <video controls type="video/webm" src={`${video}?api_key=serwa`} style={{width: "100%"}}></video>
+    <div className='video-container'>
+        <video  controls poster={video.image} className='video-container__player'></video>
     </div>
   )
 }

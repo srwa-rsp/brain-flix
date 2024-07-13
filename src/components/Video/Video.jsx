@@ -8,7 +8,7 @@ const Video = ({video,handelSelectVideo}) => {
        {video.image ? <img className='video-item__image' src={video.image} alt={video.title}/> : <div className='video-item__image--placeholder'></div>}  
         <div className='video-item__info'>
             <strong>{video.title}</strong>
-            <p>{video.channel}</p>
+            <span>{video.channel}</span>
         </div>
     </div>
   )
