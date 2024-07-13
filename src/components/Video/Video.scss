@@ -1,0 +1,23 @@
+@use "../../styles/partials/variables" as vars;
+.video-item{
+    display: flex;
+    gap: 1rem;
+
+    &__image{
+        min-width: 10rem;
+        height: 5rem;
+        border-radius: 4px;
+        &--placeholder{
+            width: 20rem;
+            height: 10rem;
+            border-radius: 4px;
+            background-color: vars.$mercury;
+        }
+    }
+
+    &__info{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}

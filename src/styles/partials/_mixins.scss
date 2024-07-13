@@ -1,0 +1,50 @@
+@use "variables" as vars;
+
+// BREAKPOINTS
+@mixin tablet {
+  @media (min-width: vars.$tablet-breakpoint) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: vars.$desktop-breakpoint) {
+    @content;
+  }
+}
+
+//SPACING
+@mixin padding-x($size) {
+  padding-left: $size;
+  padding-right: $size;
+}
+
+@mixin padding-y($size) {
+  padding-top: $size;
+  padding-bottom: $size;
+}
+
+
+// RESPONSIVE FONTS
+@mixin font-size($fs-map ,$size-adjustment: 0) {
+  @each $fs-breakpoint, $fs-values in $fs-map {
+    $fs-size: map-get($fs-values, size);
+    $fs-weight: map-get($fs-values, weight);
+    $fs-line: map-get($fs-values, line);
+    $adjusted-size: $fs-size + $size-adjustment;
+
+    @if $fs-breakpoint == null {
+      font-size: $adjusted-size;
+      font-weight: $fs-weight;
+      line-height: $fs-line;
+    } @else  {
+
+      @media (min-width: $fs-breakpoint) {
+        font-size: $adjusted-size;
+        font-weight: $fs-weight;
+        line-height: $fs-line;
+      }
+    }
+  }
+}
+
+

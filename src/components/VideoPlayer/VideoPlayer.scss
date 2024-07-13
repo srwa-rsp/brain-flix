@@ -1,0 +1,22 @@
+@use '../../styles/partials/mixins';
+@use '../../styles/partials/variables' as vars;
+
+.video-container{
+    width: 100%;
+    background-color: black;
+    margin: auto;
+    
+    @include mixins.tablet{
+        @include mixins.padding-x(vars.$spacing-medium);
+    }
+    
+    @include mixins.desktop{
+        @include mixins.padding-x(10rem);
+    }
+
+    &__player{
+        aspect-ratio: 16/9;
+        width: 100%;
+        color: white
+    }
+}

@@ -50,11 +50,24 @@ p {
   line-height: 1.6rem;
 }
 
-.label {
+.label, .subtitle {
   display: block;
   font-weight: 600;
   font-size: 0.9rem;
   color: #AFAFAF;
   text-transform: uppercase;
   margin-bottom: 1rem;
-}/*# sourceMappingURL=App.css.map */
+}
+
+.next-video-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+@media (min-width: 1280px) {
+  .next-video-container {
+    width: 70rem;
+    padding: 1rem 0 2rem 1rem;
+    border-left: 2px solid #e1e1e1;
+  }
+}/*# sourceMappingURL=NextVideo.css.map */
