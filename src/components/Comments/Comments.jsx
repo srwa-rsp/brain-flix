@@ -1,5 +1,7 @@
 import React from "react";
 import "./Comment.css";
+import { getCurrentDate } from "../../utils/helpers";
+
 
 const Comments = ({ video }) => {
   return (
@@ -10,7 +12,7 @@ const Comments = ({ video }) => {
           <div className="comment__info-container">
             <div className="comment__info">
               <span>{comment.name}</span>
-              <span className="comment__info--date">{comment.timestamp}</span>
+              <span className="comment__info--date">{getCurrentDate(comment.timestamp)}</span>
             </div>
             <div className="comment__info">
               <p>{comment.comment}</p>
