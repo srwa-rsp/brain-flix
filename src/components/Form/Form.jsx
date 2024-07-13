@@ -2,6 +2,7 @@ import React from "react";
 import avatar from '../../assets/Images/Mohan-muruge.jpg'
 import './Form.css'
 import Button from "../Button/Button";
+import addCommentIcon from '../../assets/Icons/add_comment.svg'
 
 const Form = () => {
   return (
@@ -27,7 +28,7 @@ const Form = () => {
             required
           ></textarea>
         </li>
-          <Button title="comment" />
+          <Button title="comment" icon={addCommentIcon}/>
       </ul>
     </form>
   );
