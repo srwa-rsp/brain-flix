@@ -17,7 +17,7 @@ const Description = ({ video }) => {
             <span>{video.views}</span>
           </div>
           <div>
-            <img src={likesIcon} alt="views" />
+            <img src={likesIcon} alt="likes" />
             <span>{video.likes}</span>
           </div>
         </div>
