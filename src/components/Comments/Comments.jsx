@@ -1,5 +1,5 @@
 import React from "react";
-import "./Comment.css";
+import "./Comments.css";
 import { getCurrentDate } from "../../utils/helpers";
 
 
