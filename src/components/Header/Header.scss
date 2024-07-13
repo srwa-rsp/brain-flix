@@ -17,6 +17,7 @@
     position: relative;
     justify-content: space-between;
   }
+
   @include mixins.desktop {
     @include mixins.padding-x(vars.$spacing-large);
   }
@@ -37,6 +38,7 @@
     justify-content: flex-end;
   }
 }
+
 .search {
   position: relative;
   width: 100%;
@@ -82,10 +84,11 @@
   &__img {
     @extend .search__img;
   }
-  
+
   &__avatar {
     @extend .search__avatar;
     display: none;
+
     @include mixins.tablet {
       display: block;
     }

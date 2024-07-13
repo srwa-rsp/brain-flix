@@ -20,7 +20,6 @@ function Header() {
           <img src={avatar} alt="avatar" className="search__avatar" />
         </div>
         <div className="upload">
-          {/* <img src={uploadIcon} className="upload__img" /> */}
             <Button title="UPLOAD" icon={uploadIcon} />
           <img src={avatar} alt="avatar" className="upload__avatar" />
         </div>

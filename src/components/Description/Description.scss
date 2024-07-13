@@ -8,21 +8,20 @@
   display: flex;
   gap: 2rem;
 
-  @include mixins.tablet{
+  @include mixins.tablet {
     border-top: none;
     justify-content: space-between;
-
   }
-  @include mixins.desktop{
+
+  @include mixins.desktop {
     padding-right: 1rem;
-
   }
 
-  span{
-    color: vars.$secondary-text-color
+  span {
+    color: vars.$secondary-text-color;
   }
 
-  img{
+  img {
     margin-right: 0.5rem;
   }
 
@@ -31,13 +30,9 @@
     flex-direction: column;
     gap: 1rem;
 
-    
-  @include mixins.tablet{
-    flex-direction: row;
-    justify-content: space-between;
-
+    @include mixins.tablet {
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
-  }
-
-
 }
