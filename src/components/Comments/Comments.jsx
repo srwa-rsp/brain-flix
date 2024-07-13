@@ -10,11 +10,11 @@ const Comments = ({ video }) => {
         <li key={comment.id} className="comment__item">
           <div className="comment__blank-avatar"></div>
           <div className="comment__info-container">
-            <div className="comment__info">
+            <div className="comment__infos">
               <span>{comment.name}</span>
-              <span className="comment__info--date">{getCurrentDate(comment.timestamp)}</span>
+              <span className="comment__infos--date">{getCurrentDate(comment.timestamp)}</span>
             </div>
-            <div className="comment__info">
+            <div className="comment__infos">
               <p>{comment.comment}</p>
 
             </div>
