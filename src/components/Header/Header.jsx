@@ -8,7 +8,7 @@ import './Header.css'
 function Header() {
   return (
     <header className="header">
-      <img src={logo} alt="logo" />
+      <a href="/"><img src={logo} alt="logo" className="header__logo" /></a>
       <div className="container">
         <div className="search">
           <img src={searchIcon} className="search__img" />
