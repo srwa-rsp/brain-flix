@@ -1,0 +1,22 @@
+.video-container {
+  width: 100%;
+  background-color: black;
+  margin: auto;
+}
+@media (min-width: 768px) {
+  .video-container {
+    padding-left: 2.3rem;
+    padding-right: 2.3rem;
+  }
+}
+@media (min-width: 1280px) {
+  .video-container {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+}
+.video-container__player {
+  aspect-ratio: 16/9;
+  width: 100%;
+  color: white;
+}/*# sourceMappingURL=VideoPlayer.css.map */

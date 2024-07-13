@@ -3,8 +3,8 @@
   gap: 1rem;
 }
 .video-item__image {
-  width: 20rem;
-  height: 10rem;
+  min-width: 10rem;
+  height: 5rem;
   border-radius: 4px;
 }
 .video-item__image--placeholder {

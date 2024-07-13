@@ -41,12 +41,6 @@
 .comment__form-item {
   flex-basis: auto;
 }
-.comment__form-list {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
 .comment__avatar {
   width: 3rem;
   height: 3rem;
@@ -56,15 +50,16 @@
   align-self: flex-start;
   flex-basis: 0;
 }
-.comment__list {
-  display: flex;
-  flex-direction: column;
-}
 .comment__info-container {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+@media (min-width: 1280px) {
+  .comment__info-container {
+    padding-right: 1rem;
+  }
 }
 .comment__item {
   display: flex;

@@ -19,7 +19,7 @@ const Main = () => {
 
   return (
     <main className="main">
-      <VideoPlayer video={selectedVideo.video} />
+      <VideoPlayer video={selectedVideo} />
       <div className="main__content">
         <VideoDetails video={selectedVideo} />
         <NextVideos

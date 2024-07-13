@@ -1,0 +1,43 @@
+@use "../../styles/partials/mixins";
+@use "../../styles/partials/variables" as vars;
+
+.info {
+  border-top: 2px solid vars.$mercury;
+  border-bottom: 2px solid vars.$mercury;
+  padding: 1rem 0;
+  display: flex;
+  gap: 2rem;
+
+  @include mixins.tablet{
+    border-top: none;
+    justify-content: space-between;
+
+  }
+  @include mixins.desktop{
+    padding-right: 1rem;
+
+  }
+
+  span{
+    color: vars.$secondary-text-color
+  }
+
+  img{
+    margin-right: 0.5rem;
+  }
+
+  &__detail {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    
+  @include mixins.tablet{
+    flex-direction: row;
+    justify-content: space-between;
+
+  }
+  }
+
+
+}

@@ -44,6 +44,21 @@ a {
   text-decoration: none;
 }
 
+p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6rem;
+}
+
+.label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #AFAFAF;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
 .button {
   width: 100%;
   min-width: 9.5rem;
@@ -78,6 +93,9 @@ a {
     padding-left: 5rem;
     padding-right: 5rem;
   }
+}
+.header__logo {
+  cursor: pointer;
 }
 
 .container {
@@ -130,6 +148,9 @@ a {
   }
 }
 
+.upload {
+  justify-content: space-between;
+}
 .upload__avatar {
   display: none;
 }

@@ -9,12 +9,16 @@
         flex-direction: column;
 
         @include mixins.padding-x(vars.$spacing-small);
+        @include mixins.padding-y(vars.$spacing-small);
 
         @include mixins.tablet{
             @include mixins.padding-x(vars.$spacing-medium);
+  
         }
         @include mixins.desktop{
             @include mixins.padding-x(vars.$spacing-large);
+            padding-bottom: 0;
+            padding-top: 0;
             flex-direction: row;
         }
 
