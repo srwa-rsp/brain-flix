@@ -12,7 +12,6 @@ const Main = () => {
 
   const handelSelectVideo = (id) => {
     const selected = videosList.filter((video) => video.id === id);
-    console.log(selected[0]);
     setSelectedVideo(selected[0]);
     const notSelected = videosList.filter((video) => video.id !== id);
     setNextVideoList(notSelected);

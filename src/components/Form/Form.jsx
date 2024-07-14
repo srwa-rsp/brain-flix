@@ -5,8 +5,12 @@ import Button from "../Button/Button";
 import addCommentIcon from '../../assets/Icons/add_comment.svg'
 
 const Form = () => {
+
+  const handleAddComment = (e)=>{
+    e.preventdefault()
+  }
   return (
-    <form action="" className="form">
+    <form className="form"  >
       <img
         src={avatar}
         alt="Avatar"
@@ -28,7 +32,7 @@ const Form = () => {
             required
           ></textarea>
         </li>
-          <Button title="comment" icon={addCommentIcon}/>
+          <Button title="comment" icon={addCommentIcon} type="button"/>
       </ul>
     </form>
   );
