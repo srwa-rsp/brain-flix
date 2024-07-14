@@ -6,11 +6,8 @@ import addCommentIcon from '../../assets/Icons/add_comment.svg'
 
 const Form = () => {
 
-  const handleAddComment = (e)=>{
-    e.preventdefault()
-  }
   return (
-    <form className="form"  >
+    <form className="form" onSubmit={ e => e.preventDefault()} >
       <img
         src={avatar}
         alt="Avatar"
@@ -32,7 +29,7 @@ const Form = () => {
             required
           ></textarea>
         </li>
-          <Button title="comment" icon={addCommentIcon} type="button"/>
+          <Button title="comment" icon={addCommentIcon}/>
       </ul>
     </form>
   );
