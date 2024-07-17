@@ -1,15 +1,20 @@
 import "./App.css";
-import Header from "./components/Header/Header";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Main from "./components/Main/Main";
+import { MainLayout } from "./layouts/MainLayout";
 
 function App() {
 
 
   return (
-    <>
-      <Header />
-      <Main />
-    </>
+    <Router>
+      <Routes>
+      <Route element={<MainLayout />}>
+        <Route path="/" element={<Main />} />
+        <Route path="/watch/:id" element={<Main />} />
+        </Route>
+      </Routes>
+    </Router>
   );
 }
 
