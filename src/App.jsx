@@ -1,6 +1,7 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Main from "./components/Main/Main";
+import HomePage from "./pages/HomePage/HomePage";
+import UploadPage from "./pages/UploadPage/UploadPage";
 import { MainLayout } from "./layouts/MainLayout";
 
 function App() {
@@ -10,9 +11,10 @@ function App() {
     <Router>
       <Routes>
       <Route element={<MainLayout />}>
-        <Route path="/" element={<Main />} />
-        <Route path="/watch/:id" element={<Main />} />
-        </Route>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/videos/:id" element={<HomePage />} />
+        <Route path="/upload" element={<UploadPage />} />
+      </Route>
       </Routes>
     </Router>
   );
