@@ -19,6 +19,10 @@
     flex: 1;
   }
 }
+.button__secondary {
+  background-color: white;
+  color: #0095ff;
+}
 
 .button:hover {
   background-color: #0065ad;

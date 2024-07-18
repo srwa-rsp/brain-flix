@@ -21,6 +21,11 @@
     }
 
     @include mixins.font-size(vars.$labels-buttons-font);
+
+    &__secondary{
+      background-color: white;
+      color:  vars.$primary-color;
+    }
   }
   
   .button:hover{
