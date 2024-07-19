@@ -1,14 +1,16 @@
 import React from "react";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
 import VideoDetails from "../../components/VideoDetails/VideoDetails";
 import NextVideos from "../../components/NextVideos/NextVideos";
-import './HomePage.css'
-import { useParams } from 'react-router-dom';
-import {useGetVideos,useGetVideoById} from '../../utils/services'
+import Description from "../../components/Description/Description";
+import Form from "../../components/Form/Form";
+import Comments from "../../components/Comments/Comments";
+import "./HomePage.css";
+import { useParams } from "react-router-dom";
+import { useGetVideos, useGetVideoById } from "../../utils/services";
 
 const HomePage = () => {
-
   const [videos, setVideos] = useState([]);
   const [selectedVideo, setSelectedVideo] = useState(null);
   const { id } = useParams();
@@ -24,7 +26,7 @@ const HomePage = () => {
         }
       } catch (err) {
         console.error(err);
-      } 
+      }
     };
 
     getVideos();
@@ -45,13 +47,28 @@ const HomePage = () => {
     }
   }, [id]);
 
+  if (!videos || !selectedVideo) {
+    return (
+      <div className="loading-overlay">
+        <div className="loading-overlay__spinner"></div>
+      </div>
+    );
+  }
+
   return (
     <main className="main">
       <VideoPlayer video={selectedVideo} />
       <div className="main__content">
-        <VideoDetails video={selectedVideo} />
+        <div>
+          <Description video={selectedVideo} />
+          <Form />
+          <Comments video={selectedVideo} />
+        </div>
+        {/* <VideoDetails video={selectedVideo} /> */}
         <NextVideos
-          videos={videos.filter(video => video.id !== (selectedVideo ? selectedVideo.id : null))}
+          videos={videos.filter(
+            (video) => video.id !== (selectedVideo ? selectedVideo.id : null)
+          )}
         />
       </div>
     </main>

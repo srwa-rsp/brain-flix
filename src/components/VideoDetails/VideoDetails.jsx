@@ -6,9 +6,7 @@ import Comments from '../Comments/Comments'
 const VideoDetails = ({video}) => {
   return (
     <div>
-        <Description video={video} />
-        <Form />
-        <Comments video={video} />
+
     </div>
   )
 }
