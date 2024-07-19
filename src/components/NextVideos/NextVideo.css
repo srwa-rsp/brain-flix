@@ -50,6 +50,22 @@ p {
   line-height: 1.6rem;
 }
 
+input:focus {
+  outline: 2px solid #0095ff;
+}
+
+input:invalid {
+  outline: 1px solid #D22D2D;
+}
+
+textarea:focus {
+  outline: 2px solid #0095ff;
+}
+
+textarea:invalid {
+  outline: 1px solid #D22D2D;
+}
+
 .label, .subtitle {
   display: block;
   font-weight: 600;
