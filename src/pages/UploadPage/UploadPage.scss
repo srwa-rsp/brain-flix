@@ -2,10 +2,13 @@
 @use '../../styles/partials/variables' as vars;
 
 .upload-main{
+  position: relative;
     @include mixins.padding-x(vars.$spacing-small);
     @include mixins.padding-y(vars.$spacing-small);
 
     @include mixins.tablet{
+      border-top: 2px solid vars.$mercury;
+
         @include mixins.padding-x(vars.$spacing-medium);
 
     }
@@ -13,9 +16,7 @@
         @include mixins.padding-x(vars.$spacing-large);
         padding-bottom: 0;
         padding-top: 0;
-
     }
-
 }
 
 .form{
@@ -23,6 +24,9 @@
         flex-direction: column;
         align-items: flex-end;
         position: relative;
+
+        border-top: 2px solid vars.$mercury;
+        border-bottom: 2px solid vars.$mercury;
       }
 
       &__image{
@@ -41,12 +45,11 @@
         gap: 1rem;
         @include mixins.tablet {
            position: absolute;
-           top: 20rem;
-           max-width: 40rem;
+           top: 19rem;
+           max-width: 20rem;
             right: 0;
             flex-direction: row;
           }
-    
       }
 
       &__inputs{
@@ -56,8 +59,4 @@
         flex: 1;
       }
 
-    //   &__link{
-    //     width: 100%;
-    //     flex: 1;
-    //   }
 }

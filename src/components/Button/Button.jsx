@@ -1,9 +1,9 @@
 import React from 'react'
 import './Button.css'
 
-const Button = ({title, icon, color}) => {
+const Button = ({title, icon, color, type,onClick}) => {
   return (
-    <button className={`button ${color === 'secondary'? `button__secondary` : ''}`}>
+    <button type={type} onClick={onClick} className={`button ${color === 'secondary'? `button__secondary` : ''}`}>
        {icon && <img src={icon} alt="icon" className="button__icon" />}
         {title}
     </button>
