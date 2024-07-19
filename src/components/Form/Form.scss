@@ -28,14 +28,7 @@
       max-height: 3rem;
     }
   }
-
-  &__input:focus {
-    outline: 2px solid vars.$primary-color;
-  }
-
-    &__input:invalid{
-      outline: 1px solid vars.$error;
-    }
+  
   &__item {
     flex: 4;
     display: flex;

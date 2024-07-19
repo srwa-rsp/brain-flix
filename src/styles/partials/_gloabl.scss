@@ -18,7 +18,7 @@ body {
   margin: 0;
 }
 
-ul{
+ul {
   padding: 0;
 }
 
@@ -26,19 +26,33 @@ li {
   list-style: none;
 }
 
-
 a {
   text-decoration: none;
 }
-p{
+p {
   @include mixins.font-size(vars.$body-copy-font);
-
 }
-.label{
+
+input:focus {
+  outline: 2px solid vars.$primary-color;
+}
+
+input:invalid {
+  outline: 1px solid vars.$error;
+}
+textarea:focus {
+  outline: 2px solid vars.$primary-color;
+}
+
+textarea:invalid {
+  outline: 1px solid vars.$error;
+}
+
+.label {
   display: block;
-    font-weight: 600;
-    font-size: 0.9rem;
-    color: vars.$secondary-text-color;
-    text-transform: uppercase;
-  margin-bottom: 1rem
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: vars.$secondary-text-color;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
 }
