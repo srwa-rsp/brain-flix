@@ -3,7 +3,7 @@ import './Button.css'
 
 const Button = ({title, icon, color, type,onClick}) => {
   return (
-    <button type={type} onClick={onClick} className={`button ${color === 'secondary'? `button__secondary` : ''}`}>
+    <button type={type} onClick={onClick} className={`button ${color === 'secondary'? `button__secondary` : 'button__primary'}`}>
        {icon && <img src={icon} alt="icon" className="button__icon" />}
         {title}
     </button>

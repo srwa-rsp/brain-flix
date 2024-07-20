@@ -26,13 +26,20 @@
     &__secondary{
       background-color: white;
       color:  vars.$primary-color;
+      &:hover{
+        background-color: white;
+        color: vars.$primary-color-hover;
+      }
     }
-  }
+
+    &__primary:hover{
+      background-color: vars.$primary-color-hover;
   
-  .button:hover{
-    background-color: vars.$primary-color-hover;
+    }
 
   }
+  
+
   .button__icon {
     position:absolute;
     left: 1rem;
