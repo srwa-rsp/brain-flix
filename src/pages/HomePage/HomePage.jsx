@@ -7,7 +7,7 @@ import Form from "../../components/Form/Form";
 import Comments from "../../components/Comments/Comments";
 import "./HomePage.css";
 import { useParams } from "react-router-dom";
-import { useGetVideos, useGetVideoById } from "../../utils/services";
+import { useGetVideos, useGetVideoById, usePostComment } from "../../utils/services";
 
 const HomePage = () => {
   const [videos, setVideos] = useState([]);
@@ -50,6 +50,30 @@ const HomePage = () => {
     }
   }, [id]);
 
+  const handlePostComments = async ( comment) => {
+    if(!id && videos.length > 0){
+      console.log(videos)
+      try {
+        const response = await usePostComment(videos[0]?.id , comment);
+        const updatedVideo = await useGetVideoById(videos[0]?.id);
+        setSelectedVideo(updatedVideo);
+      } catch (error) {
+        console.error(err);
+      }
+      
+    }
+    if(id){
+      try {
+        const response = await usePostComment(id, comment);
+        const updatedVideo = await useGetVideoById(id);
+        setSelectedVideo(updatedVideo);
+  
+      } catch (err) {
+        console.error(err);
+      }
+    }
+  };
+
   if (!videos || !selectedVideo) {
     return (
       <div className="loading-overlay">
@@ -64,7 +88,7 @@ const HomePage = () => {
       <div className="main__content">
         <div>
           <Description video={selectedVideo} />
-          <Form />
+          <Form onPostComment={handlePostComments} video={selectedVideo}/>
           <Comments video={selectedVideo} />
         </div>
         <NextVideos

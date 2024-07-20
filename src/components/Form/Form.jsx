@@ -1,13 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import avatar from '../../assets/Images/Mohan-muruge.jpg'
 import './Form.css'
 import Button from "../Button/Button";
 import addCommentIcon from '../../assets/Icons/add_comment.svg'
 
-const Form = () => {
+const Form = ({onPostComment , video}) => {
+  const [comment, setComment] = useState({name: "Serwa", comment:""})
+
+  const handleCommentChange = (e) => {
+    setComment((prevComment) => ({
+      ...prevComment,
+      comment: e.target.value,
+    }));
+  };
+
+  const handleSubmit = (e) =>{
+    e.preventDefault();
+    onPostComment(comment);
+    setComment({name: "", comment:""})
+  }
 
   return (
-    <form className="form" onSubmit={ e => e.preventDefault()} >
+    <form className="form" onSubmit={ handleSubmit } >
       <img
         src={avatar}
         alt="Avatar"
@@ -26,6 +40,8 @@ const Form = () => {
             id="comment"
             name="comment"
             placeholder="Add a new comment"
+            value={comment.comment}
+            onChange={handleCommentChange}
             required
           ></textarea>
         </li>
