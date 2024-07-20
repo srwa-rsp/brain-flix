@@ -1,7 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
-import VideoDetails from "../../components/VideoDetails/VideoDetails";
 import NextVideos from "../../components/NextVideos/NextVideos";
 import Description from "../../components/Description/Description";
 import Form from "../../components/Form/Form";
@@ -44,6 +43,10 @@ const HomePage = () => {
 
     if (id) {
       getVideoById(id);
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     }
   }, [id]);
 
@@ -64,9 +67,8 @@ const HomePage = () => {
           <Form />
           <Comments video={selectedVideo} />
         </div>
-        {/* <VideoDetails video={selectedVideo} /> */}
         <NextVideos
-          videos={videos.filter(
+          videos={videos.filter( //returns all elements that match the condition
             (video) => video.id !== (selectedVideo ? selectedVideo.id : null)
           )}
         />
