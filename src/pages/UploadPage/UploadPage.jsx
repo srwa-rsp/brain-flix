@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./UploadPage.css";
 import Button from "../../components/Button/Button";
 import publishIcon from "../../assets/Icons/publish.svg";
@@ -7,9 +7,10 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const UploadPage = () => {
-
+  const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
   const navigate = useNavigate();
-
+  
   const handlePublish = (e) => {
     toast.success(`Video uploaded successfully!`);
     setTimeout(() => {
@@ -20,55 +21,57 @@ const UploadPage = () => {
   return (
     <main className="upload-main">
       <h2>Upload Video</h2>
-      <form className="form">
-        <ul className="form__list">
-          <li className="form__item form__item--preview">
+      <form className="upload-form">
+        <ul className="upload-form__list">
+          <li className="upload-form__item upload-form__item--preview">
             <label htmlFor="image" className="label">
               video thumbnail
             </label>
             <img
               src={videoPreview}
               alt="video-preview"
-              className="form__image"
+              className="upload-form__image"
               name="image"
             />
           </li>
-          <div className="form__inputs">
-            <li className="form__item">
+          <div className="upload-form__inputs">
+            <li className="upload-form__item">
               <label htmlFor="title" className="label">
                 title your video
               </label>
               <input
                 type="text"
-                className="form__input"
+                className="upload-form__input"
                 name="title"
                 placeholder="Add a title to your video"
+                onChange={(e)=>setTitle(e.target.value)}
                 required
               />
             </li>
-            <li className="form__item">
+            <li className="upload-form__item">
               <label htmlFor="description" className="label">
                 add a video description
               </label>
               <textarea
                 rows="4"
                 cols="50"
-                className="form__input"
+                className="upload-form__input"
                 type="textarea"
                 name="description"
                 placeholder="Add a description to your video"
+                onChange={(e)=>setDescription(e.target.value)}
                 required
               ></textarea>
             </li>
           </div>
-          <div className="form__buttons">
-            <Button title="cancel" color="secondary" />
+          <div className="upload-form__buttons">
             <Button
               title="publish"
               type="button"
               icon={publishIcon}
               onClick={handlePublish}
             />
+            <Button title="cancel" color="secondary" />
           </div>
         </ul>
       </form>
