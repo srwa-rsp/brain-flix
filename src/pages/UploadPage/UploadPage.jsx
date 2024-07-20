@@ -44,6 +44,7 @@ const UploadPage = () => {
                 className="upload-form__input"
                 name="title"
                 placeholder="Add a title to your video"
+                value={title}
                 onChange={(e)=>setTitle(e.target.value)}
                 required
               />
@@ -59,6 +60,7 @@ const UploadPage = () => {
                 type="textarea"
                 name="description"
                 placeholder="Add a description to your video"
+                value={description}
                 onChange={(e)=>setDescription(e.target.value)}
                 required
               ></textarea>
