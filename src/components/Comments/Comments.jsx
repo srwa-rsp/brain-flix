@@ -6,7 +6,7 @@ import { getCurrentDate } from "../../utils/helpers";
 const Comments = ({ video }) => {
   return (
     <ul className="comment__list">
-      {video.comments.map((comment) => (
+      {video.comments.sort((a,b) => b.timestamp - a.timestamp).map((comment) => (
         <li key={comment.id} className="comment__item">
           <div className="comment__blank-avatar"></div>
           <div className="comment__info-container">
