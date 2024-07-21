@@ -4,7 +4,7 @@ import './Form.css'
 import Button from "../Button/Button";
 import addCommentIcon from '../../assets/Icons/add_comment.svg'
 
-const Form = ({onPostComment , video}) => {
+const Form = ({onPostComment }) => {
   const [comment, setComment] = useState({name: "Serwa", comment:""})
 
   const handleCommentChange = (e) => {

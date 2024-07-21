@@ -92,7 +92,7 @@ const HomePage = () => {
           <Comments video={selectedVideo} />
         </div>
         <NextVideos
-          videos={videos.filter( //returns all elements that match the condition
+          videos={videos.filter( 
             (video) => video.id !== (selectedVideo ? selectedVideo.id : null)
           )}
         />

@@ -6,6 +6,7 @@ import uploadIcon from "../../assets/Icons/upload.svg";
 import avatar from "../../assets/Images/Mohan-muruge.jpg";
 import "./Header.css";
 import { Link } from "react-router-dom";
+
 function Header() {
   return (
     <header className="header">
