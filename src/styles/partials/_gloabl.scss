@@ -32,21 +32,19 @@ a {
 p {
   @include mixins.font-size(vars.$body-copy-font);
 }
-
-input:focus {
+input, textarea {
+  outline: 1px solid grey; 
+}
+input:focus,textarea:focus {
   outline: 2px solid vars.$primary-color;
 }
 
-input:invalid {
+input:invalid:focus, 
+textarea:invalid:focus {
   outline: 1px solid vars.$error;
-}
-textarea:focus {
-  outline: 2px solid vars.$primary-color;
 }
 
-textarea:invalid {
-  outline: 1px solid vars.$error;
-}
+
 
 .label {
   display: block;
