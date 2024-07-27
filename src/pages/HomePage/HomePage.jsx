@@ -52,7 +52,6 @@ const HomePage = () => {
 
   const handlePostComments = async ( comment) => {
     if(!id && videos.length > 0){
-      console.log(videos)
       try {
         const response = await usePostComment(videos[0]?.id , comment);
         const updatedVideo = await useGetVideoById(videos[0]?.id);
