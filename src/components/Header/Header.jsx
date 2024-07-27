@@ -10,9 +10,9 @@ import { Link } from "react-router-dom";
 function Header() {
   return (
     <header className="header">
-      <a href="/">
+      <Link to="/">
         <img src={logo} alt="logo" className="header__logo" />
-      </a>
+      </Link>
       <div className="container">
         <div className="search">
           <img src={searchIcon} className="search__img" />

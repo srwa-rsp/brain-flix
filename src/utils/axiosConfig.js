@@ -1,24 +1,23 @@
-import axios from 'axios';
+import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: 'https://unit-3-project-api-0a5620414506.herokuapp.com/',
+  baseURL: "http://localhost:8080",
 });
 
 axiosInstance.interceptors.request.use(
-  config => {
+  (config) => {
     return config;
   },
-  error => {
+  (error) => {
     return Promise.reject(error);
   }
 );
 
-
 axiosInstance.interceptors.response.use(
-  response => {
+  (response) => {
     return response;
   },
-  error => {
+  (error) => {
     return Promise.reject(error);
   }
 );

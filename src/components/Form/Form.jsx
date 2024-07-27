@@ -17,7 +17,7 @@ const Form = ({onPostComment }) => {
   const handleSubmit = (e) =>{
     e.preventDefault();
     onPostComment(comment);
-    setComment({name: "", comment:""})
+    setComment(prev => ({...prev, comment:""}))
   }
 
   return (
