@@ -12,33 +12,22 @@ const UploadPage = () => {
   const [description, setDescription] = useState("");
   const navigate = useNavigate();
 
-  // const handlePublish = (e) => {
-  //   e.preventDefault()
-  //   toast.success(`Video uploaded successfully!`);
-  //   setTimeout(() => {
-  //     navigate("/");
-  //   }, 2500);
-  // };
-
-  const handlePublish = async ( e) => {
-    e.preventDefault()
+  const handlePublish = async (e) => {
+    e.preventDefault();
     const video = {
       title: title,
-      description:description,
-      image: 'Upload-video-preview.jpg'
+      description: description,
+      image: "Upload-video-preview.jpg",
+    };
+    try {
+      const response = await usePostVideo(video);
+      toast.success(`Video uploaded successfully!`);
+      setTimeout(() => {
+        navigate("/");
+      }, 2500);
+    } catch (error) {
+      console.error(err);
     }
-      try {
-        const response = await usePostVideo(video);
-        toast.success(`Video uploaded successfully!`);
-        setTimeout(() => {
-          navigate("/");
-        }, 2500);
-      } catch (error) {
-        console.error(err);
-      }
-      
-  
-
   };
 
   return (
@@ -90,11 +79,7 @@ const UploadPage = () => {
             </li>
           </div>
           <div className="upload-form__buttons">
-            <Button
-              title="publish"
-              type="submit"
-              icon={publishIcon}
-            />
+            <Button title="publish" type="submit" icon={publishIcon} />
             <Link to="/">
               <Button title="cancel" color="secondary" type="button" />
             </Link>
